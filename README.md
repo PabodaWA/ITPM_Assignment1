@@ -34,23 +34,31 @@ Install all required Node modules using:
 
 ```bash
 npm install
+```
 
 🌐 Install Playwright Browsers
 Install the required Playwright browsers using:
 
+```bash
 npx playwright install
+```
 
 ▶ Run the Automated Tests
 Run all test cases with the following command:
 
+```bash
 npx playwright test
+```
 
 📊 View Test Execution Report
 After test execution, view the HTML report using one of the following commands:
-
+```bash
 npx playwright show-report
+```
 or
+```bash
 npx playwright show-report --port 9333
+```
 
 
 
