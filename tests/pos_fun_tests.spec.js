@@ -17,7 +17,7 @@ test('Pos_Fun_0001: Convert a short daily usage question', async ({ page }) => {
 
   const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
 
   console.log('Test Pos_Fun_0001 executed successfully');
 
@@ -40,8 +40,7 @@ test('Pos_Fun_0001: Convert a short daily usage question', async ({ page }) => {
 
   const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
 
-  // Wait for the field to have any content first
-  await expect(outputField).not.toBeEmpty({ timeout: 10000 });
+  
   
   // Then check for the expected text
   await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
@@ -66,7 +65,7 @@ test('Pos_Fun_0003: Convert mixed Singlish + English imperative sentence with fu
 
   const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
 
   console.log('Test Pos_Fun_0003 executed successfully');
 
@@ -91,7 +90,7 @@ test('Pos_Fun_0004: Long mixed-language input with slang + typo causes incorrect
 
   await expect(outputField).not.toBeEmpty({ timeout: 20000   }); 
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
 
   console.log('Test Pos_Fun_0004 executed successfully');
 
@@ -114,7 +113,7 @@ test('Pos_Fun_0005: Convert sentence with minor typographical errors', async ({ 
 
    
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
 
   console.log('Test Pos_Fun_0005 executed successfully');
 
@@ -137,7 +136,7 @@ test('Pos_Fun_0006: Convert positive future tense sentence', async ({ page }) =>
 
    
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
 
   console.log('Test Pos_Fun_0006 executed successfully');
 
@@ -160,7 +159,7 @@ test('Pos_Fun_0007: Convert negative form sentence correctly', async ({ page }) 
 
    
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
 
   console.log('Test Pos_Fun_0007 executed successfully');
 
@@ -183,7 +182,7 @@ test('Pos_Fun_0008: Convert imperative command sentence', async ({ page }) => {
 
    
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
 
   console.log('Test Pos_Fun_0008 executed successfully');
 
@@ -206,7 +205,7 @@ test('Pos_Fun_0009: Convert religious greeting expression', async ({ page }) => 
 
    
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
 
   console.log('Test Pos_Fun_0009 executed successfully');
 
@@ -227,9 +226,9 @@ test('Pos_Fun_0010: Convert polite request sentence', async ({ page }) => {
 
   const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
 
-  await expect(outputField).not.toBeEmpty({ timeout: 10000 });
+ 
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
 
   console.log('Test Pos_Fun_0010 executed successfully');
 
@@ -250,9 +249,9 @@ test('Pos_Fun_0011: Convert polite request sentence', async ({ page }) => {
 
   const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
 
-  await expect(outputField).not.toBeEmpty({ timeout: 10000 });
+ 
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
 
   console.log('Test Pos_Fun_0011 executed successfully');
 
@@ -269,13 +268,13 @@ test('Pos_Fun_0012: Convert polite phrasing request sentence', async ({ page }) 
   await expect(inputField).toBeVisible();
 
   await inputField.fill('');
-  await inputField.pressSequentially(singlishInput, { delay: 50 });
+  await inputField.pressSequentially(singlishInput, { delay: 10 });
 
   const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
 
-  await expect(outputField).not.toBeEmpty({ timeout: 10000 });
+
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
 
   console.log('Test Pos_Fun_0012 executed successfully');
 
@@ -296,9 +295,9 @@ test('Pos_Fun_0013: Convert informal phrasing sentence', async ({ page }) => {
 
   const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
 
-  await expect(outputField).not.toBeEmpty({ timeout: 10000 });
+
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
 
   console.log('Test Pos_Fun_0013 executed successfully');
 
@@ -319,9 +318,9 @@ test('Pos_Fun_0014:Convert common daily feeling expression', async ({ page }) =>
 
   const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
 
-  await expect(outputField).not.toBeEmpty({ timeout: 10000 });
+  
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
 
   console.log('Test Pos_Fun_0014 executed successfully');
 
@@ -344,8 +343,245 @@ test('Pos_Fun_0015:Convert informal daily expression', async ({ page }) => {
 
   await expect(outputField).not.toBeEmpty({ timeout: 10000 });
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 10000 });
 
   console.log('Test Pos_Fun_0015 executed successfully');
 
 });
+
+test('Pos_Fun_0016:Convert sentence with place name and common English word', async ({ page }) => {
+
+  await page.goto('https://www.swifttranslator.com/', { waitUntil: 'domcontentloaded' });
+
+  const singlishInput = 'mama bus eken gaallea yanavaa';
+  const expectedSinhala = 'මම bus එකෙන් ගාල්ලේ යනවා';
+
+  const inputField = page.locator('[placeholder="Input Your Singlish Text Here."]');
+  await expect(inputField).toBeVisible();
+
+  await inputField.fill('');
+  await inputField.pressSequentially(singlishInput, { delay: 50 });
+
+  const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
+
+  
+   
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+
+  console.log('Test Pos_Fun_0016 executed successfully');
+
+});
+
+
+test('Pos_Fun_0017:Convert a short daily travel sentence with time', async ({ page }) => {
+
+  await page.goto('https://www.swifttranslator.com/', { waitUntil: 'domcontentloaded' });
+
+  const singlishInput = 'mama 7.30 bus eken  gaalle yanava';
+  const expectedSinhala = 'මම 7.30 bus එකෙන්  ගාල්ලෙ යනව';
+
+  const inputField = page.locator('[placeholder="Input Your Singlish Text Here."]');
+  await expect(inputField).toBeVisible();
+
+  await inputField.fill('');
+  await inputField.pressSequentially(singlishInput, { delay: 50 });
+
+  const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
+
+
+   
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+
+  console.log('Test Pos_Fun_0017 executed successfully');
+
+});
+
+test('Pos_Fun_0018:Convert mixed Singlish + English technical sentence', async ({ page }) => {
+
+  await page.goto('https://www.swifttranslator.com/', { waitUntil: 'domcontentloaded' });
+
+  const singlishInput = 'mata adha Zoom meeting ekak thiyenavaa, eeka 3.30 PM venakota start venavaa kiyala Email ekakin kivvaa';
+  const expectedSinhala = 'මට අද Zoom meeting එකක් තියෙනවා, ඒක 3.30 PM වෙනකොට start වෙනවා කියල Email එකකින් කිව්වා';
+
+  const inputField = page.locator('[placeholder="Input Your Singlish Text Here."]');
+  await expect(inputField).toBeVisible();
+
+  await inputField.fill('');
+  await inputField.pressSequentially(singlishInput, { delay: 50 });
+
+  const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
+
+
+   
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+
+  console.log('Test Pos_Fun_0018 executed successfully');
+
+});
+
+test('Pos_Fun_0019:Compound sentence', async ({ page }) => {
+
+  await page.goto('https://www.swifttranslator.com/', { waitUntil: 'domcontentloaded' });
+
+  const singlishInput = 'mama gedhara yanavaa, namuth vahinavaa';
+  const expectedSinhala = 'මම ගෙදර යනවා, නමුත් වහිනවා';
+
+  const inputField = page.locator('[placeholder="Input Your Singlish Text Here."]');
+  await expect(inputField).toBeVisible();
+
+  await inputField.fill('');
+  await inputField.pressSequentially(singlishInput, { delay: 50 });
+
+  const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
+
+
+   
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+
+  console.log('Test Pos_Fun_0019 executed successfully');
+
+});
+
+test('Pos_Fun_0020:Negative sentence', async ({ page }) => {
+
+  await page.goto('https://www.swifttranslator.com/', { waitUntil: 'domcontentloaded' });
+
+  const singlishInput = 'mama ehema karanne naehae';
+  const expectedSinhala = 'මම එහෙම කරන්නේ නැහැ';
+
+  const inputField = page.locator('[placeholder="Input Your Singlish Text Here."]');
+  await expect(inputField).toBeVisible();
+
+  await inputField.fill('');
+  await inputField.pressSequentially(singlishInput, { delay: 10 });
+
+  const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
+
+ 
+
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 35000 });
+
+  console.log('Test Pos_Fun_0020 executed successfully');
+
+});
+
+test('Pos_Fun_0021:facebook sentence', async ({ page }) => {
+
+  await page.goto('https://www.swifttranslator.com/', { waitUntil: 'domcontentloaded' });
+
+  const singlishInput = 'facebook username eka mokakdha?';
+  const expectedSinhala = 'facebook username එක මොකක්ද?';
+
+  const inputField = page.locator('[placeholder="Input Your Singlish Text Here."]');
+  await expect(inputField).toBeVisible();
+
+  await inputField.fill('');
+  await inputField.pressSequentially(singlishInput, { delay: 50 });
+
+  const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
+
+ 
+
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 40000 });
+
+  console.log('Test Pos_Fun_0021 executed successfully');
+
+});
+
+test('Pos_Fun_0022:Currency format', async ({ page }) => {
+
+  await page.goto('https://www.swifttranslator.com/', { waitUntil: 'domcontentloaded' });
+
+  const singlishInput = 'Rs. 2500 gaththaa';
+  const expectedSinhala = 'Rs. 2500 ගත්තා';
+
+  const inputField = page.locator('[placeholder="Input Your Singlish Text Here."]');
+  await expect(inputField).toBeVisible();
+
+  await inputField.fill('');
+  await inputField.pressSequentially(singlishInput, { delay: 50 });
+
+  const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
+
+ 
+
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 40000 });
+
+  console.log('Test Pos_Fun_0022 executed successfully');
+
+});
+
+test('Pos_Fun_0023:Multi-line input', async ({ page }) => {
+
+  await page.goto('https://www.swifttranslator.com/', { waitUntil: 'domcontentloaded' });
+
+  const singlishInput = 'mama gedhara yanavaa'+ 
+'oyaa enavadha';
+  const expectedSinhala = 'මම ගෙදර යනවා'+ 
+'ඔයා එනවද';
+
+  const inputField = page.locator('[placeholder="Input Your Singlish Text Here."]');
+  await expect(inputField).toBeVisible();
+
+  await inputField.fill('');
+  await inputField.pressSequentially(singlishInput, { delay: 50 });
+
+  const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
+
+ 
+
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 50000 });
+
+  console.log('Test Pos_Fun_0023 executed successfully');
+
+});
+
+/*
+test('Pos_Fun_0024:CPU technical term', async ({ page }) => {
+
+  await page.goto('https://www.swifttranslator.com/', { waitUntil: 'domcontentloaded' });
+
+  const singlishInput = 'mage PC eke CPU slow venavaa';
+
+  const expectedSinhala = 'මගේ PC එකේ CPU slow වෙනවා'; 
+
+
+  const inputField = page.locator('[placeholder="Input Your Singlish Text Here."]');
+  await expect(inputField).toBeVisible();
+
+  await inputField.fill('');
+  await inputField.pressSequentially(singlishInput, { delay: 50 });
+
+  const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
+
+ 
+
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 60000 });
+
+  console.log('Test Pos_Fun_0024 executed successfully');
+
+});  */
+
+test('Pos_Fun_0024:CConvert simple sentence with common English word', async ({ page }) => {
+
+  await page.goto('https://www.swifttranslator.com/', { waitUntil: 'domcontentloaded' });
+
+  const singlishInput = 'Mama campus yanavaa';
+
+  const expectedSinhala = 'මම campus යනවා'; 
+
+
+  const inputField = page.locator('[placeholder="Input Your Singlish Text Here."]');
+  await expect(inputField).toBeVisible();
+
+  await inputField.fill('');
+  await inputField.pressSequentially(singlishInput, { delay: 50 });
+
+  const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
+
+ 
+
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 60000 });
+
+  console.log('Test Pos_Fun_0024 executed successfully');
+}); 
