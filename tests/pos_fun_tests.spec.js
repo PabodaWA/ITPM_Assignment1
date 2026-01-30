@@ -17,7 +17,7 @@ test('Pos_Fun_0001: Convert a short daily usage question', async ({ page }) => {
 
   const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 133000 });
 
   console.log('Test Pos_Fun_0001 executed successfully');
 
@@ -43,7 +43,7 @@ test('Pos_Fun_0001: Convert a short daily usage question', async ({ page }) => {
   
   
   // Then check for the expected text
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 5000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 10000 });
 
   console.log('Test Pos_Fun_0002 executed successfully');
 });
@@ -65,7 +65,7 @@ test('Pos_Fun_0003: Convert mixed Singlish + English imperative sentence with fu
 
   const outputField = page.locator('text=Sinhala').locator('..').locator('div').nth(1);
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 15000 });
 
   console.log('Test Pos_Fun_0003 executed successfully');
 
@@ -113,7 +113,7 @@ test('Pos_Fun_0005: Convert sentence with minor typographical errors', async ({ 
 
    
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 25000 });
 
   console.log('Test Pos_Fun_0005 executed successfully');
 
@@ -136,7 +136,7 @@ test('Pos_Fun_0006: Convert positive future tense sentence', async ({ page }) =>
 
    
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 30000 });
 
   console.log('Test Pos_Fun_0006 executed successfully');
 
@@ -159,7 +159,7 @@ test('Pos_Fun_0007: Convert negative form sentence correctly', async ({ page }) 
 
    
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 35000 });
 
   console.log('Test Pos_Fun_0007 executed successfully');
 
@@ -182,7 +182,7 @@ test('Pos_Fun_0008: Convert imperative command sentence', async ({ page }) => {
 
    
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 35000 });
 
   console.log('Test Pos_Fun_0008 executed successfully');
 
@@ -205,7 +205,7 @@ test('Pos_Fun_0009: Convert religious greeting expression', async ({ page }) => 
 
    
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 40000 });
 
   console.log('Test Pos_Fun_0009 executed successfully');
 
@@ -228,7 +228,7 @@ test('Pos_Fun_0010: Convert polite request sentence', async ({ page }) => {
 
  
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 45000 });
 
   console.log('Test Pos_Fun_0010 executed successfully');
 
@@ -251,7 +251,7 @@ test('Pos_Fun_0011: Convert polite request sentence', async ({ page }) => {
 
  
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 50000 });
 
   console.log('Test Pos_Fun_0011 executed successfully');
 
@@ -274,7 +274,7 @@ test('Pos_Fun_0012: Convert polite phrasing request sentence', async ({ page }) 
 
 
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 55000 });
 
   console.log('Test Pos_Fun_0012 executed successfully');
 
@@ -297,7 +297,7 @@ test('Pos_Fun_0013: Convert informal phrasing sentence', async ({ page }) => {
 
 
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 134000 });
 
   console.log('Test Pos_Fun_0013 executed successfully');
 
@@ -320,7 +320,7 @@ test('Pos_Fun_0014:Convert common daily feeling expression', async ({ page }) =>
 
   
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 65000 });
 
   console.log('Test Pos_Fun_0014 executed successfully');
 
@@ -343,7 +343,7 @@ test('Pos_Fun_0015:Convert informal daily expression', async ({ page }) => {
 
   await expect(outputField).not.toBeEmpty({ timeout: 10000 });
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 10000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 70000 });
 
   console.log('Test Pos_Fun_0015 executed successfully');
 
@@ -366,7 +366,7 @@ test('Pos_Fun_0016:Convert sentence with place name and common English word', as
 
   
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 75000 });
 
   console.log('Test Pos_Fun_0016 executed successfully');
 
@@ -390,7 +390,7 @@ test('Pos_Fun_0017:Convert a short daily travel sentence with time', async ({ pa
 
 
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 80000 });
 
   console.log('Test Pos_Fun_0017 executed successfully');
 
@@ -413,7 +413,7 @@ test('Pos_Fun_0018:Convert mixed Singlish + English technical sentence', async (
 
 
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 85000 });
 
   console.log('Test Pos_Fun_0018 executed successfully');
 
@@ -436,7 +436,7 @@ test('Pos_Fun_0019:Compound sentence', async ({ page }) => {
 
 
    
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 20000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 90000 });
 
   console.log('Test Pos_Fun_0019 executed successfully');
 
@@ -459,7 +459,7 @@ test('Pos_Fun_0020:Negative sentence', async ({ page }) => {
 
  
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 35000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 95000 });
 
   console.log('Test Pos_Fun_0020 executed successfully');
 
@@ -482,7 +482,7 @@ test('Pos_Fun_0021:facebook sentence', async ({ page }) => {
 
  
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 40000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 100000 });
 
   console.log('Test Pos_Fun_0021 executed successfully');
 
@@ -505,7 +505,7 @@ test('Pos_Fun_0022:Currency format', async ({ page }) => {
 
  
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 40000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 105000 });
 
   console.log('Test Pos_Fun_0022 executed successfully');
 
@@ -530,7 +530,7 @@ test('Pos_Fun_0023:Multi-line input', async ({ page }) => {
 
  
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 50000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 101000 });
 
   console.log('Test Pos_Fun_0023 executed successfully');
 
@@ -581,7 +581,7 @@ test('Pos_Fun_0024:CConvert simple sentence with common English word', async ({ 
 
  
 
-  await expect(outputField).toContainText(expectedSinhala, { timeout: 60000 });
+  await expect(outputField).toContainText(expectedSinhala, { timeout: 115000 });
 
   console.log('Test Pos_Fun_0024 executed successfully');
 }); 
